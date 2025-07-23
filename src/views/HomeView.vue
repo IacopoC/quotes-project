@@ -5,7 +5,7 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
 <template>
   <main>
     <div class="home">
-      <h1>Quote of the moment:</h1>
+      <h1>Quote of the Moment:</h1>
       <QuoteDisplay />
     </div>
   </main>
@@ -24,6 +24,6 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
 }
 h1 {
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 </style>
