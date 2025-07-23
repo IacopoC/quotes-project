@@ -36,7 +36,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (intervalId) {
-    clearInterval(intervalId); // Ferma il timer
+    clearInterval(intervalId);
     console.log("Intervallo fermato.");
   }
 });
