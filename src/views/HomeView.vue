@@ -5,7 +5,7 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
 <template>
   <main>
     <div class="home">
-      <h1>Le Tue Citazioni Quotidiane</h1>
+      <h1>Quote of the moment:</h1>
       <QuoteDisplay />
     </div>
   </main>
