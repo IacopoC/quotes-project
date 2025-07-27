@@ -1,6 +1,8 @@
 <template>
   <div class="quote-display">
-    <p>{{ currentQuote }}</p>
+    <Transition name="fade" mode="out-in">
+    <p :key="currentQuote">{{ currentQuote }}</p>
+    </Transition>
   </div>
 </template>
 
@@ -57,8 +59,19 @@ onUnmounted(() => {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 p {
   margin: 0;
   line-height: 1.4;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
