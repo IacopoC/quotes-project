@@ -10,11 +10,11 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const quotes = [
-  "Sii il cambiamento che vuoi vedere nel mondo. – Mahatma Gandhi",
-  "La vita è quello che succede mentre sei impegnato a fare altri progetti. – John Lennon",
-  "Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. – Eleanor Roosevelt",
-  "Non cercare di essere un uomo di successo, ma piuttosto un uomo di valore. – Albert Einstein",
-  "Il modo migliore per predire il futuro è crearlo. – Peter Drucker"
+  "I met a traveller from an antique land",
+  "Who said: Two vast and trunkless legs of stone. Stand in the desert.",
+  "Near them on the sand, Half sunk, a shatter'd visage lies, whose frown. And wrinkled lip and sneer of cold command",
+  "My name is Ozymandias, king of kings: Look on my works, ye Mighty, and despair!",
+  "The lone and level sands stretch far away."
 ];
 
 const currentQuoteIndex = ref(0);
@@ -48,7 +48,6 @@ onUnmounted(() => {
 
 .quote-display {
   color: white;
-  padding: 20px;
   text-align: center;
   font-size: 1.5em;
   font-style: italic;
@@ -56,11 +55,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 p {
+  min-height: 100px;
   margin: 0;
   line-height: 1.4;
 }
