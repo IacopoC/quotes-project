@@ -29,17 +29,17 @@ const changeQuote = () => {
   currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length;
 
   currentQuote.value = quotes[currentQuoteIndex.value];
-  console.log("Citazione cambiata a:", currentQuote.value);
+  console.log("Quotes changed at:", currentQuote.value);
 };
 
 onMounted(() => {
-  intervalId = setInterval(changeQuote, 5000);
+  intervalId = setInterval(changeQuote, 8000);
 });
 
 onUnmounted(() => {
   if (intervalId) {
     clearInterval(intervalId);
-    console.log("Intervallo fermato.");
+    console.log("Stop interval time.");
   }
 });
 </script>
