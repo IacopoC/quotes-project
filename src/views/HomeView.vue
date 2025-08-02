@@ -20,7 +20,6 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 h1 {
   color: white;
