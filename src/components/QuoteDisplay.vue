@@ -4,6 +4,10 @@
     <p :key="currentQuote">{{ currentQuote }}</p>
     </Transition>
   </div>
+  <div class="controls">
+    <button @click="previousQuote">Back</button>
+    <button @click="nextQuote">Next</button>
+  </div>
 </template>
 
 <script setup>
@@ -12,7 +16,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const quotes = [
   "I met a traveller from an antique land",
   "Who said: Two vast and trunkless legs of stone. Stand in the desert.",
-  "Near them on the sand, Half sunk, a shatter'd visage lies, whose frown. And wrinkled lip and sneer of cold command",
+  "Near them on the sand, Half sunk, a shattered visage lies, whose frown. And wrinkled lip and sneer of cold command",
   "My name is Ozymandias, king of kings: Look on my works, ye Mighty, and despair!",
   "The lone and level sands stretch far away."
 ];
@@ -23,17 +27,27 @@ const currentQuote = ref(quotes[currentQuoteIndex.value]);
 
 let intervalId = null;
 
-
-const changeQuote = () => {
-
+const nextQuote = () => {
   currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length;
-
   currentQuote.value = quotes[currentQuoteIndex.value];
-  console.log("Quotes changed at:", currentQuote.value);
+  resetTimer();
+};
+
+const previousQuote = () => {
+  currentQuoteIndex.value = (currentQuoteIndex.value - 1 + quotes.length) % quotes.length;
+  currentQuote.value = quotes[currentQuoteIndex.value];
+  resetTimer();
+};
+
+const resetTimer = () => {
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+  intervalId = setInterval(nextQuote, 8000);
 };
 
 onMounted(() => {
-  intervalId = setInterval(changeQuote, 8000);
+  resetTimer();
 });
 
 onUnmounted(() => {
@@ -71,5 +85,17 @@ p {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+button {
+  background-color: darkslategrey;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 </style>
