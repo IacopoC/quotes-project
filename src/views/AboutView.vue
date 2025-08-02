@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2><strong>Quote of the moment</strong> is a web project developed to give to people a quote every few seconds</h2>
+    <h2>Quote of the moment is a web project developed to give to people a quote every few seconds</h2>
   </div>
 </template>
 
