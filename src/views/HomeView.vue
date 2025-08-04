@@ -24,5 +24,8 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
 h1 {
   color: white;
   margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

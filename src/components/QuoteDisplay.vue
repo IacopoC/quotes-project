@@ -75,7 +75,6 @@ onUnmounted(() => {
   color: white;
   text-align: center;
   font-size: 1.5em;
-  font-style: italic;
   min-height: 100px;
   display: flex;
   align-items: center;
@@ -87,6 +86,9 @@ onUnmounted(() => {
 }
 
 p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100px;
   margin: 0;
   line-height: 1.4;
