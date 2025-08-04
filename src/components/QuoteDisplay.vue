@@ -19,6 +19,9 @@ const quotes = [
   "Who said: Two vast and trunkless legs of stone. Stand in the desert.",
   "Near them on the sand, Half sunk, a shattered visage lies, whose frown. And wrinkled lip and sneer of cold command",
   "My name is Ozymandias, king of kings: Look on my works, ye Mighty, and despair!",
+  "Stand in the desert. Near them on the sand,",
+  "And wrinkled lip and sneer of cold command",
+  "Of that colossal wreck, boundless and bare",
   "The lone and level sands stretch far away."
 ];
 
@@ -50,7 +53,7 @@ const resetTimer = () => {
 const quoteCounter = computed(() => {
   const current = currentQuoteIndex.value + 1;
   const total = quotes.length;
-  return `${current} / ${total}`;
+  return `${current} | ${total}`;
 });
 
 
