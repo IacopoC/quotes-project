@@ -4,6 +4,7 @@
     <p :key="currentQuote">{{ currentQuote }}</p>
     </Transition>
   </div>
+  <p class="quote-counter">{{ quoteCounter }}</p>
   <div class="controls">
     <button @click="previousQuote">Back</button>
     <button @click="nextQuote">Next</button>
@@ -11,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const quotes = [
   "I met a traveller from an antique land",
@@ -46,6 +47,13 @@ const resetTimer = () => {
   intervalId = setInterval(nextQuote, 8000);
 };
 
+const quoteCounter = computed(() => {
+  const current = currentQuoteIndex.value + 1;
+  const total = quotes.length;
+  return `${current} / ${total}`;
+});
+
+
 onMounted(() => {
   resetTimer();
 });
@@ -69,6 +77,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.quote-counter {
+  color: white;
 }
 
 p {
