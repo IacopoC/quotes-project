@@ -11,7 +11,7 @@ describe('QuoteDisplay.vue', () => {
     const expectedQuote = "I met a traveller from an antique land";
 
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('1 / 8');
+    expect(wrapper.find('.quote-counter').text()).toBe('1 | 8');
   });
 
 
@@ -24,7 +24,7 @@ describe('QuoteDisplay.vue', () => {
 
     const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 / 8');
+    expect(wrapper.find('.quote-counter').text()).toBe('2 | 8');
   });
 
 
@@ -41,7 +41,7 @@ describe('QuoteDisplay.vue', () => {
 
     const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 / 8');
+    expect(wrapper.find('.quote-counter').text()).toBe('2 | 8');
   });
 
 

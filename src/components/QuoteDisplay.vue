@@ -4,7 +4,7 @@
     <p :key="currentQuote">{{ currentQuote }}</p>
     </Transition>
   </div>
-  <p class="quote-counter">{{ quoteCounter }}</p>
+  <span class="quote-counter">{{ quoteCounter }}</span>
   <div class="controls">
     <button @click="previousQuote">Back</button>
     <button @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
@@ -98,6 +98,7 @@ onUnmounted(() => {
 
 .quote-counter {
   color: white;
+  padding: 20px 0;
 }
 
 p {
