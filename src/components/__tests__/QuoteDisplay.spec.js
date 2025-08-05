@@ -11,20 +11,20 @@ describe('QuoteDisplay.vue', () => {
     const expectedQuote = "I met a traveller from an antique land";
 
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('1 / 5');
+    expect(wrapper.find('.quote-counter').text()).toBe('1 / 8');
   });
 
 
   it('dovrebbe cambiare alla citazione successiva quando si clicca "Next"', async () => {
     const wrapper = mount(QuoteDisplay);
-    const nextButton = wrapper.find('button:nth-child(3)'); // Seleziona il terzo pulsante
+    const nextButton = wrapper.find('button:nth-child(3)');
 
 
     await nextButton.trigger('click');
 
     const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 / 5');
+    expect(wrapper.find('.quote-counter').text()).toBe('2 / 8');
   });
 
 
@@ -41,7 +41,7 @@ describe('QuoteDisplay.vue', () => {
 
     const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 / 5');
+    expect(wrapper.find('.quote-counter').text()).toBe('2 / 8');
   });
 
 
