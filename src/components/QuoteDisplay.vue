@@ -7,6 +7,7 @@
   <p class="quote-counter">{{ quoteCounter }}</p>
   <div class="controls">
     <button @click="previousQuote">Back</button>
+    <button @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
     <button @click="nextQuote">Next</button>
   </div>
 </template>
@@ -27,6 +28,7 @@ const quotes = [
 
 const currentQuoteIndex = ref(0);
 const currentQuote = ref(quotes[currentQuoteIndex.value]);
+const canPause = ref(false);
 
 
 let intervalId = null;
@@ -34,13 +36,17 @@ let intervalId = null;
 const nextQuote = () => {
   currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length;
   currentQuote.value = quotes[currentQuoteIndex.value];
-  resetTimer();
+  if(!canPause.value) {
+    resetTimer();
+  }
 };
 
 const previousQuote = () => {
   currentQuoteIndex.value = (currentQuoteIndex.value - 1 + quotes.length) % quotes.length;
   currentQuote.value = quotes[currentQuoteIndex.value];
-  resetTimer();
+  if(!canPause.value) {
+    resetTimer();
+  }
 };
 
 const resetTimer = () => {
@@ -48,6 +54,15 @@ const resetTimer = () => {
     clearInterval(intervalId);
   }
   intervalId = setInterval(nextQuote, 8000);
+};
+
+const tooglePause = () => {
+  canPause.value = !canPause.value;
+  if(canPause.value) {
+    clearInterval(intervalId);
+  } else {
+    resetTimer();
+  }
 };
 
 const quoteCounter = computed(() => {
@@ -114,5 +129,15 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: lightslategray;
+}
+
+button.paused {
+  background-color: steelblue;
 }
 </style>
