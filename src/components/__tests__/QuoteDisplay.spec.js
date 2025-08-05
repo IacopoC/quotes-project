@@ -17,7 +17,7 @@ describe('QuoteDisplay.vue', () => {
 
   it('dovrebbe cambiare alla citazione successiva quando si clicca "Next"', async () => {
     const wrapper = mount(QuoteDisplay);
-    const nextButton = wrapper.find('button:nth-child(3)');
+    const nextButton = wrapper.find('button', { text: 'Next' });
 
 
     await nextButton.trigger('click');
@@ -30,8 +30,8 @@ describe('QuoteDisplay.vue', () => {
 
   it('dovrebbe cambiare alla citazione precedente quando si clicca "Back"', async () => {
     const wrapper = mount(QuoteDisplay);
-    const nextButton = wrapper.find('button:nth-child(3)');
-    const backButton = wrapper.find('button:nth-child(1)');
+    const nextButton = wrapper.find('button', { text: 'Next' });
+    const backButton = wrapper.find('button', { text: 'Back' });
 
 
     await nextButton.trigger('click');
@@ -47,7 +47,7 @@ describe('QuoteDisplay.vue', () => {
 
   it('dovrebbe mettere in pausa il timer automatico quando si clicca "Pause"', async () => {
     const wrapper = mount(QuoteDisplay);
-    const pauseButton = wrapper.find('button:nth-child(2)');
+    const pauseButton = wrapper.find('button', { text: 'Pause' });
 
 
     expect(pauseButton.text()).toBe('Pause');
