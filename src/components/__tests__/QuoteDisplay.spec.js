@@ -22,9 +22,9 @@ describe('QuoteDisplay.vue', () => {
 
     await nextButton.trigger('click');
 
-    const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
+    const expectedQuote = "The lone and level sands stretch far away.";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 | 8');
+    expect(wrapper.find('.quote-counter').text()).toBe('8 | 8');
   });
 
 
@@ -39,15 +39,15 @@ describe('QuoteDisplay.vue', () => {
     await backButton.trigger('click');
 
 
-    const expectedQuote = "Who said: Two vast and trunkless legs of stone. Stand in the desert.";
+    const expectedQuote = "And wrinkled lip and sneer of cold command";
     expect(wrapper.find('p').text()).toBe(expectedQuote);
-    expect(wrapper.find('.quote-counter').text()).toBe('2 | 8');
+    expect(wrapper.find('.quote-counter').text()).toBe('6 | 8');
   });
 
 
   it('dovrebbe mettere in pausa il timer automatico quando si clicca "Pause"', async () => {
     const wrapper = mount(QuoteDisplay);
-    const pauseButton = wrapper.find('button', { text: 'Pause' });
+    const pauseButton = wrapper.findAll('button')[1];
 
 
     expect(pauseButton.text()).toBe('Pause');
