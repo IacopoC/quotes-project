@@ -102,7 +102,7 @@ onUnmounted(() => {
 }
 
 p {
-  font-family: "Lato", sans-serif;
+  font-family: "Lexend Giga", sans-serif;
   font-weight: 400;
   font-style: normal;
   min-height: 100px;

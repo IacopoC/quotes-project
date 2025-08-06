@@ -8,6 +8,7 @@
 
  h2 {
    color: white;
+   font-family: "Lexend Giga", sans-serif;
  }
 
 @media (min-width: 1024px) {
