@@ -22,6 +22,7 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
   box-sizing: border-box;
 }
 h1 {
+  text-align: center;
   color: white;
   margin-bottom: 20px;
   font-family: "Lexend Giga", sans-serif;
