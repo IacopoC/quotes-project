@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>Quote of the moment is a web project developed to give to people a quote every few seconds</h2>
+    <h2>Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem.</h2>
   </div>
 </template>
 

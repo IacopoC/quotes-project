@@ -31,6 +31,7 @@ nav {
   width: 100%;
   text-align: center;
   margin-top: 2rem;
+  font-family: "Lexend Giga", sans-serif;
 }
 
 nav a.router-link-exact-active {
