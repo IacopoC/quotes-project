@@ -102,22 +102,9 @@ onUnmounted(() => {
 }
 
 p {
-  font-family: "Lexend Giga", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   min-height: 100px;
   margin: 0;
   line-height: 1.4;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 
 button {
@@ -130,7 +117,6 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
 }
 

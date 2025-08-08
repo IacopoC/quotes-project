@@ -16,9 +16,4 @@ const currentYear = ref(new Date().getFullYear());
   color: white;
   width: 100%;
 }
-
-p {
-  font-family: "Lexend Giga", sans-serif;
-}
-
 </style>
