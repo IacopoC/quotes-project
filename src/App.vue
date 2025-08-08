@@ -6,6 +6,7 @@ import FooterMain from './components/FooterMain.vue';
 <template>
   <header>
     <div class="wrapper">
+      <h3>Quotes from Ozymandias</h3>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
