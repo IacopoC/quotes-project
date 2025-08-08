@@ -6,7 +6,7 @@ import FooterMain from './components/FooterMain.vue';
 <template>
   <header>
     <div class="wrapper">
-      <h3>Quotes from Ozymandias</h3>
+      <h3 class="title-header">Quotes from Ozymandias</h3>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -22,6 +22,10 @@ import FooterMain from './components/FooterMain.vue';
 header {
   line-height: 1.5;
   max-height: 100vh;
+}
+
+.title-header {
+ color: white;
 }
 
 .wrapper {
