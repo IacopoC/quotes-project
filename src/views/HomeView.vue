@@ -1,5 +1,6 @@
 <script setup>
 import QuoteDisplay from '@/components/QuoteDisplay.vue';
+import MapDisplay from '@/components/MapDisplay.vue';
 </script>
 
 <template>
@@ -7,6 +8,7 @@ import QuoteDisplay from '@/components/QuoteDisplay.vue';
     <div class="home">
       <h1>Quotes from Ozymandias:</h1>
       <QuoteDisplay />
+      <MapDisplay />
     </div>
   </main>
 </template>
