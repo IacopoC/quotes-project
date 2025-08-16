@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { GoogleMap, AdvancedMarker } from 'vue3-google-map'
 
-const center = { lat: 40.689247, lng: -74.044502 }
+const center = { lat: 45.8777451, lng: 10.7394732 }
 const markerOptions = { position: center }
 const pinOptions = { background: '#FBBC04' }
 
