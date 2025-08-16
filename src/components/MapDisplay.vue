@@ -3,7 +3,7 @@ import { GoogleMap, AdvancedMarker } from 'vue3-google-map'
 
 const center = { lat: 45.8777451, lng: 10.7394732 }
 const markerOptions = { position: center }
-const pinOptions = { background: '#FBBC04' }
+const pinOptions = { background: '#FBBC04', glyph: '★', glyphColor: 'white', borderColor: 'white' }
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 const mapId = import.meta.env.VITE_MAP_ID;
