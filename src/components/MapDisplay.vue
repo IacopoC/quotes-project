@@ -22,12 +22,13 @@ const toggleInfo = () => {
     :mapId="mapId"
     class="google-map"
     :center="center"
-    :zoom="15"
+    :zoom="8"
   >
     <AdvancedMarker :options="markerOptions" :pin-options="pinOptions" @click="toggleInfo" />
     <InfoWindow v-if="showInfo" :options="{ position: center }">
       <div>
-        <h3>Ozymandias place</h3>
+        <h3>Ozymandias</h3>
+        <p>A place where I remember</p>
         <p>Lat: {{ center.lat }}</p>
         <p>Lng: {{ center.lng }}</p>
       </div>
