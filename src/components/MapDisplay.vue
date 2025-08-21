@@ -22,6 +22,11 @@ const markers = ref([
   }
 ])
 
+const center = {
+  lat: (markers.value[0].position.lat + markers.value[1].position.lat) / 2,
+  lng: (markers.value[0].position.lng + markers.value[1].position.lng) / 2
+}
+
 const activeMarker = ref(null)
 
 const toggleInfo = (id) => {
@@ -34,7 +39,7 @@ const toggleInfo = (id) => {
     :api-key="apiKey"
     :map-id="mapId"
     class="google-map"
-    :center="markers[0].position"
+    :center="center"
     :zoom="8"
   >
     <template v-for="marker in markers" :key="marker.id">
