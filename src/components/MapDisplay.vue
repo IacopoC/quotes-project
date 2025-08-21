@@ -52,7 +52,7 @@ const toggleInfo = (id) => {
         v-if="activeMarker === marker.id"
         :options="{ position: marker.position }"
       >
-        <div>
+        <div class="info-map">
           <h3>{{ marker.title }}</h3>
           <p>{{ marker.description }}</p>
           <p>Lat: {{ marker.position.lat }}</p>
@@ -74,6 +74,10 @@ h3, p {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.info-map {
+  padding: 0 20px 10px 20px;
 }
 </style>
 
