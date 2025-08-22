@@ -71,9 +71,11 @@ h3, p {
 .google-map {
   width: 100%;
   height: 500px;
-  padding: 25px;
+  padding: 10px;
+  margin: 40px 0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px #c3c3c3;
+  background-color: darkslategrey;
 }
 
 .info-map {
