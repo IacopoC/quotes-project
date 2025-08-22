@@ -1,17 +1,3 @@
-<template>
-  <div class="quote-display">
-    <Transition name="fade" mode="out-in">
-    <p :key="currentQuote">{{ currentQuote }}</p>
-    </Transition>
-  </div>
-  <span class="quote-counter">{{ quoteCounter }}</span>
-  <div class="controls">
-    <button @click="previousQuote">Back</button>
-    <button @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
-    <button @click="nextQuote">Next</button>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 
@@ -83,6 +69,20 @@ onUnmounted(() => {
   }
 });
 </script>
+
+<template>
+  <div class="quote-display">
+    <Transition name="fade" mode="out-in">
+    <p :key="currentQuote">{{ currentQuote }}</p>
+    </Transition>
+  </div>
+  <span class="quote-counter">{{ quoteCounter }}</span>
+  <div class="controls">
+    <button @click="previousQuote">Back</button>
+    <button @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
+    <button @click="nextQuote">Next</button>
+  </div>
+</template>
 
 <style scoped>
 
