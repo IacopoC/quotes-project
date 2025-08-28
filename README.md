@@ -1,10 +1,21 @@
-# quotes-project
+### Quotes Project - Ozymandias
 
-This template should help get you started developing with Vue 3 in Vite.
+Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem.
 
-## Recommended IDE Setup
+### Features
+- Quotes from Ozymandias
+- Google Maps with markers
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+### Dependencies
+- [Vue](https://vuejs.org/)
+- [Google Fonts](https://fonts.google.com/)
+- [Vitest](https://vitest.dev/)
+- [Vue Router](https://router.vuejs.org/)
+
+### API
+- [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it)
+
 
 ## Customize configuration
 
