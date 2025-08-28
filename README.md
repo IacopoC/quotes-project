@@ -9,12 +9,12 @@ Quotes from Ozymandias is a project about the famous poem of Shelley, linked to 
 
 ### Dependencies
 - [Vue](https://vuejs.org/)
-- [Google Fonts](https://fonts.google.com/)
+- [Google Fonts Lexend Giga](https://fonts.google.com/specimen/Lexend+Giga)
 - [Vitest](https://vitest.dev/)
 - [Vue Router](https://router.vuejs.org/)
 
 ### API
-- [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it)
+- [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it) - Api key and Map ID required
 
 
 ## Customize configuration
