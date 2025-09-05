@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const songs = ref([
   {
     title: "Castle",
-    description: "The Caste of Ateez. Running to the quiet night. ",
+    description: "The Castle of Ateez: running to the quiet night. ",
     duration: "3:10",
     youtubeEmbed: "https://www.youtube.com/embed/doWVVntzWqM"
   },
@@ -19,7 +19,7 @@ const songs = ref([
 
 <template>
   <div class="song-list">
-    <h2>Songs of this period in Ozymandias</h2>
+    <h2>Songs of this period in Ozymandias:</h2>
     <div class="grid-container">
       <div v-for="(song, index) in songs" :key="index" class="song-item">
         <h3>{{ song.title }}</h3>
