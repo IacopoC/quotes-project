@@ -13,7 +13,7 @@ describe('MusicDisplay.vue', () => {
     const wrapper = mount(MusicDisplay)
     const titles = wrapper.findAll('h3').map(node => node.text())
     expect(titles).toContain('Castle')
-    expect(titles).toContain('Ateez')
+    expect(titles).toContain('Lemon Drop')
   })
 
   it('embeds youtube iframes', () => {
