@@ -1,6 +1,7 @@
 <script setup>
 import QuoteDisplay from '@/components/QuoteDisplay.vue';
 import MapDisplay from '@/components/MapDisplay.vue';
+import MusicDisplay from '@/components/MusicDisplay.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import MapDisplay from '@/components/MapDisplay.vue';
     <div class="map-container">
       <MapDisplay />
     </div>
+    <MusicDisplay />
   </main>
 </template>
 
