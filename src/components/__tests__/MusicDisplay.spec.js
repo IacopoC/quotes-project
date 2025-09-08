@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
-import MusicDisplay from '../MusicDisplay.vue';
+import { describe, it, expect, vi } from 'vitest'
+import MusicDisplay from '../MusicDisplay.vue'
 
 describe('MusicDisplay.vue', () => {
   it('renders the correct number of songs', () => {
@@ -21,5 +21,30 @@ describe('MusicDisplay.vue', () => {
     const iframes = wrapper.findAll('iframe')
     expect(iframes.length).toBe(2)
     expect(iframes[0].attributes('src')).toContain('youtube.com/embed/')
+  })
+
+  it('increments likes and adds liked class on button click', async () => {
+    const wrapper = mount(MusicDisplay)
+    vi.stubGlobal('alert', () => {})
+
+    const firstButton = wrapper.find('button')
+    expect(firstButton.text()).toContain('0')
+    await firstButton.trigger('click')
+    expect(firstButton.text()).toContain('1')
+    expect(firstButton.classes()).toContain('liked')
+  })
+
+  it('does not increment likes if already liked', async () => {
+    const wrapper = mount(MusicDisplay)
+
+    const alertMock = vi.fn()
+    vi.stubGlobal('alert', alertMock)
+
+    const firstButton = wrapper.find('button')
+    await firstButton.trigger('click')
+    await firstButton.trigger('click')
+
+    expect(firstButton.text()).toContain('1')
+    expect(alertMock).toHaveBeenCalledWith('You already liked the video 👍')
   })
 })
