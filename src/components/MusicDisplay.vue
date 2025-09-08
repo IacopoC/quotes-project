@@ -1,20 +1,41 @@
 <script setup>
 import { ref } from 'vue'
 
-const songs = ref([
+const defaultSongs = ref([
   {
+    id: 1,
     title: "Castle",
     description: "The Castle of Ateez: running to the quiet night. ",
     duration: "3:10",
-    youtubeEmbed: "https://www.youtube.com/embed/doWVVntzWqM"
+    youtubeEmbed: "https://www.youtube.com/embed/doWVVntzWqM",
+    likes: 0
   },
   {
+    id: 2,
     title: "Lemon Drop",
     description: "Light hit for the summer 2025 by Ateez.",
     duration: "3:43",
-    youtubeEmbed: "https://www.youtube.com/embed/H4H99b1CjPU"
+    youtubeEmbed: "https://www.youtube.com/embed/H4H99b1CjPU",
+    likes: 0
   }
 ])
+
+const songs = ref(JSON.parse(localStorage.getItem('songs')) || defaultSongs)
+const likedVideos = JSON.parse(localStorage.getItem('likedVideos')) || []
+
+function likeSong(index) {
+  const song = songs.value[index]
+
+  if (!likedVideos.includes(song.id)) {
+    song.likes++
+    likedVideos.push(song.id)
+
+    localStorage.setItem('songs', JSON.stringify(songs.value))
+    localStorage.setItem('likedVideos', JSON.stringify(likedVideos))
+  } else {
+    alert("You already liked the video 👍")
+  }
+}
 </script>
 
 <template>
@@ -34,6 +55,9 @@ const songs = ref([
             allowfullscreen
           ></iframe>
         </div>
+        <button @click="likeSong(index)">
+          👍 Like me ({{ song.likes }})
+        </button>
         </div>
   </div>
   </div>

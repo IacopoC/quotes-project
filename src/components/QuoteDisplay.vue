@@ -106,25 +106,4 @@ p {
   margin: 0;
   line-height: 1.4;
 }
-
-button {
-  background-color: darkslategrey;
-  border: none;
-  color: white;
-  margin: 5px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-}
-
-button:hover {
-  background-color: lightslategray;
-}
-
-button.paused {
-  background-color: steelblue;
-}
 </style>
