@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const defaultSongs = ref([
+const defaultSongs = [
   {
     id: 1,
     title: "Castle",
@@ -18,7 +18,7 @@ const defaultSongs = ref([
     youtubeEmbed: "https://www.youtube.com/embed/H4H99b1CjPU",
     likes: 0
   }
-])
+]
 
 const songs = ref(JSON.parse(localStorage.getItem('songs')) || defaultSongs)
 const likedVideos = JSON.parse(localStorage.getItem('likedVideos')) || []
