@@ -20,8 +20,8 @@ const defaultSongs = [
   }
 ]
 
-const songs = ref(JSON.parse(localStorage.getItem('songs')) || defaultSongs)
-const likedVideos = JSON.parse(localStorage.getItem('likedVideos')) || []
+const songs = ref(JSON.parse(localStorage.getItem('songs')) ?? defaultSongs)
+const likedVideos = JSON.parse(localStorage.getItem('likedVideos')) ?? []
 
 function likeSong(index) {
   const song = songs.value[index]
@@ -55,7 +55,7 @@ function likeSong(index) {
             allowfullscreen
           ></iframe>
         </div>
-        <button @click="likeSong(index)">
+        <button @click="likeSong(index)" :class="{ liked: likedVideos.includes(song.id) }">
           👍 Like me ({{ song.likes }})
         </button>
         </div>
@@ -90,7 +90,7 @@ h2 {
   height: 0;
   overflow: hidden;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .video-container iframe {
@@ -105,5 +105,11 @@ h2 {
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+
+button.liked {
+  background-color: #636363;
+  color: white;
+  cursor: default;
 }
 </style>
