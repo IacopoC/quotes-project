@@ -40,7 +40,7 @@ function likeSong(index) {
 
 <template>
   <div class="song-list">
-    <h2>Songs of this period in Ozymandias:</h2>
+    <h2>Songs in Ozymandias:</h2>
     <div class="grid-container">
       <div v-for="(song, index) in songs" :key="index" class="song-item">
         <h3>{{ song.title }}</h3>
@@ -101,15 +101,15 @@ h2 {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
-
 button.liked {
   background-color: #636363;
   color: white;
   cursor: default;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
