@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <h2>Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem.</h2>
+    <div class="about-container">
+    <h2>Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened during this period.</h2>
+  </div>
   </div>
 </template>
 
@@ -11,9 +13,13 @@
    font-family: "Lexend Giga", sans-serif;
  }
 
+ .about-container {
+   padding: 20px 0;
+ }
+
 @media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
   }
