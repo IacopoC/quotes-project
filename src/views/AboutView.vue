@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about-container">
-    <h2>Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened during this period.</h2>
+    <h2>Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened to during this period.</h2>
   </div>
   </div>
 </template>
