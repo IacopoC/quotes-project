@@ -1,3 +1,21 @@
+<script setup>
+import { useRoute } from 'vue-router';
+import { useHead } from '@vueuse/head';
+
+
+const route = useRoute();
+
+useHead({
+  title: route.meta.title,
+  meta: [
+    {
+      name: 'description',
+      content: route.meta.description,
+    },
+  ],
+});
+</script>
+
 <template>
   <div class="about">
     <div class="about-container">
