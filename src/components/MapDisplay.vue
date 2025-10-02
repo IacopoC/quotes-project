@@ -75,7 +75,7 @@ h3, p {
   margin: 40px 0;
   border-radius: 12px;
   box-shadow: 0 2px 8px #c3c3c3;
-  background-color: darkslategrey;
+  background-color: darkred;
 }
 
 .info-map {

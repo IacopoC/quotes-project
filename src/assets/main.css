@@ -19,16 +19,16 @@ span, button {
 }
 
 a,
-.green {
+.red {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #F00;
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(0, 100%, 37%, 0.2);
   }
 }
 
@@ -37,7 +37,7 @@ a,
 }
 
 button {
-  background-color: darkslategrey;
+  background-color: #F00;
   border: none;
   color: white;
   margin: 5px;
@@ -50,9 +50,9 @@ button {
 }
 
 button:hover {
-  background-color: lightslategray;
+  background-color: darkred;
 }
 
 button.paused {
-  background-color: steelblue;
+  background-color: orangered;
 }
