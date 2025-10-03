@@ -20,20 +20,28 @@ const defaultSongs = [
   }
 ]
 
-const songs = ref(JSON.parse(localStorage.getItem('songs')) ?? defaultSongs)
-const likedVideos = JSON.parse(localStorage.getItem('likedVideos')) ?? []
+let songs = ref(JSON.parse(localStorage.getItem('songs')) ?? defaultSongs)
+const likedVideos = ref(JSON.parse(localStorage.getItem('likedVideos')) ?? [])
 
 function likeSong(index) {
   const song = songs.value[index]
+  const videoId = song.id
 
-  if (!likedVideos.includes(song.id)) {
-    song.likes++
-    likedVideos.push(song.id)
+  const isLiked = likedVideos.value.includes(videoId)
 
+  if (isLiked) {
+    song.likes--
+    const indexToRemove = likedVideos.value.indexOf(videoId)
+
+    if (indexToRemove > -1) {
+      likedVideos.value.splice(indexToRemove, 1)
+
+    } else {
+      song.likes++
+      likedVideos.value.push(videoId)
+    }
     localStorage.setItem('songs', JSON.stringify(songs.value))
-    localStorage.setItem('likedVideos', JSON.stringify(likedVideos))
-  } else {
-    alert("You already liked the video 👍")
+    localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
   }
 }
 </script>
