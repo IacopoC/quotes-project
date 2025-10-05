@@ -26,7 +26,6 @@ const likedVideos = ref(JSON.parse(localStorage.getItem('likedVideos')) ?? [])
 function likeSong(index) {
   const song = songs.value[index]
   const videoId = song.id
-
   const isLiked = likedVideos.value.includes(videoId)
 
   if (isLiked) {
@@ -35,14 +34,15 @@ function likeSong(index) {
 
     if (indexToRemove > -1) {
       likedVideos.value.splice(indexToRemove, 1)
-
-    } else {
-      song.likes++
-      likedVideos.value.push(videoId)
     }
-    localStorage.setItem('songs', JSON.stringify(songs.value))
-    localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
+
+  } else {
+    song.likes++
+    likedVideos.value.push(videoId)
   }
+
+  localStorage.setItem('songs', JSON.stringify(songs.value))
+  localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
 }
 </script>
 
