@@ -51,7 +51,6 @@ describe('MusicDisplay.vue', () => {
       const wrapper = mount(MusicDisplay)
       const firstButton = wrapper.find('button')
 
-      // 1. Click per mettere LIKE
       await firstButton.trigger('click')
       expect(localStorage.setItem).toHaveBeenCalledWith(
         'songs',
