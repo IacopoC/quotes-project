@@ -64,7 +64,7 @@ function likeSong(index) {
           ></iframe>
         </div>
         <button @click="likeSong(index)" :class="{ liked: likedVideos.includes(song.id) }">
-          👍 Like me ({{ song.likes }})
+          👍 Like ({{ song.likes }})
         </button>
         </div>
   </div>
