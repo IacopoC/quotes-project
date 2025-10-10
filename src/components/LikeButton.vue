@@ -12,10 +12,10 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(["toogle-like"]);
+const emit = defineEmits(["toggle-like"]);
 
 function handleButtonClick() {
-  emit("toogle-like");
+  emit("toggle-like");
 }
 
 </script>
