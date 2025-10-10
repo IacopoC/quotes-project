@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import LikeButton from '@/components/LikeButton.vue'
 
 const defaultSongs = [
   {
@@ -23,24 +24,23 @@ const defaultSongs = [
 let songs = ref(JSON.parse(localStorage.getItem('songs')) ?? defaultSongs)
 const likedVideos = ref(JSON.parse(localStorage.getItem('likedVideos')) ?? [])
 
-function likeSong(index) {
-  const song = songs.value[index]
-  const videoId = song.id
-  const isLiked = likedVideos.value.includes(videoId)
+function toggleLike(songId) {
+  const song = songs.value.find(s => s.id === songId)
+  if (!song) return;
 
-  if (isLiked) {
+  const isLiked = likedVideos.value.includes(songId)
+
+  if(isLiked) {
     song.likes--
-    const indexToRemove = likedVideos.value.indexOf(videoId)
-
-    if (indexToRemove > -1) {
+    const indexToRemove = likedVideos.value.indexOf(songId)
+    if(indexToRemove > -1) {
       likedVideos.value.splice(indexToRemove, 1)
     }
 
   } else {
     song.likes++
-    likedVideos.value.push(videoId)
+    likedVideos.value.push(songId);
   }
-
   localStorage.setItem('songs', JSON.stringify(songs.value))
   localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
 }
@@ -50,7 +50,7 @@ function likeSong(index) {
   <div class="song-list">
     <h2>Songs in Ozymandias:</h2>
     <div class="grid-container">
-      <div v-for="(song, index) in songs" :key="index" class="song-item">
+      <div v-for="song in songs.value" :key="song.id" class="song-item">
         <h3>{{ song.title }}</h3>
         <p>{{ song.description }}</p>
         <p><strong>Time:</strong> {{ song.duration }}</p>
@@ -63,11 +63,13 @@ function likeSong(index) {
             allowfullscreen
           ></iframe>
         </div>
-        <button @click="likeSong(index)" :class="{ liked: likedVideos.includes(song.id) }">
-          👍 Like ({{ song.likes }})
-        </button>
-        </div>
-  </div>
+        <LikeButton
+          :current-likes="song.likes"
+          :is-liked="likedVideos.value.includes(song.id)"
+          @toggle-like="toggleLike(song.id)"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
