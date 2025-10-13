@@ -21,11 +21,14 @@ const defaultSongs = [
   }
 ]
 
-let songs = ref(JSON.parse(localStorage.getItem('songs')) ?? defaultSongs)
-const likedVideos = ref(JSON.parse(localStorage.getItem('likedVideos')) ?? [])
+const savedSongs = JSON.parse(localStorage.getItem('songs'))
+const savedLikes = JSON.parse(localStorage.getItem('likedVideos'))
+
+const songs = ref(Array.isArray(savedSongs) ? savedSongs : defaultSongs)
+const likedVideos = ref(Array.isArray(savedLikes) ? savedLikes : [])
 
 function toggleLike(songId) {
-  const song = songs.value.find(s => s.id === songId)
+  const song = songs.value.find(currentSong => currentSong.id === songId)
   if (!song) return;
 
   const isLiked = likedVideos.value.includes(songId)
@@ -50,7 +53,7 @@ function toggleLike(songId) {
   <div class="song-list">
     <h2>Songs in Ozymandias:</h2>
     <div class="grid-container">
-      <div v-for="song in songs.value" :key="song.id" class="song-item">
+      <div v-for="song in songs" :key="song.id" class="song-item">
         <h3>{{ song.title }}</h3>
         <p>{{ song.description }}</p>
         <p><strong>Time:</strong> {{ song.duration }}</p>
@@ -65,7 +68,7 @@ function toggleLike(songId) {
         </div>
         <LikeButton
           :current-likes="song.likes"
-          :is-liked="likedVideos.value.includes(song.id)"
+          :is-liked="likedVideos.includes(song.id)"
           @toggle-like="toggleLike(song.id)"
         />
       </div>
