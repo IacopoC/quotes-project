@@ -1,5 +1,6 @@
 <script setup>
-const props = defineProps({
+
+defineProps({
   currentLikes: {
     type: Number,
     required: true,
@@ -19,8 +20,8 @@ function handleButtonClick() {
 </script>
 
 <template>
-  <button @click="handleButtonClick" :class="{ liked: props.isLiked }">
-    👍 Like me ({{ props.currentLikes }})
+  <button @click="handleButtonClick" :class="{ liked: isLiked }">
+    👍 Like me ({{ currentLikes }})
   </button>
 </template>
 
