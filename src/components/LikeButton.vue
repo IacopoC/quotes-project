@@ -21,7 +21,7 @@ function handleButtonClick() {
 
 <template>
   <button @click="handleButtonClick" :class="{ liked: isLiked }">
-    <span v-if="!isLiked"> 👍 Like me ({{ currentLikes }})</span>
+    <span v-if="!isLiked"> 👍 Like me! ({{ currentLikes }})</span>
     <span v-else> ❤️ Liked! ({{ currentLikes }})</span>
   </button>
 </template>
