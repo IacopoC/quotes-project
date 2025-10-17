@@ -5,7 +5,7 @@ Quotes from Ozymandias is a project about the famous poem of Shelley, linked to 
 ### Features
 - Quotes from Ozymandias
 - Google Maps with markers
-- Music videos from Ozymandias
+- Music videos from Ozymandias with like buttons
 
 
 ### Dependencies
