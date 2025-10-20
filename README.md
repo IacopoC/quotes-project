@@ -51,3 +51,10 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Concepts applied in the project
+- Composition API
+- ref, script setup
+- Basic routing using Vue router
+- Basic npm configuration for google maps package
+- Testing
