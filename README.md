@@ -17,6 +17,13 @@ Quotes from Ozymandias is a project about the famous poem of Shelley, linked to 
 ### API
 - [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it) - Api key and Map ID required
 
+### Concepts applied in the project
+- Composition API
+- ref, script setup
+- Component Events
+- Basic routing using Vue router
+- Basic npm configuration for google maps package
+- Testing
 
 ## Customize configuration
 
@@ -51,10 +58,3 @@ npm run test:unit
 ```sh
 npm run lint
 ```
-
-### Concepts applied in the project
-- Composition API
-- ref, script setup
-- Basic routing using Vue router
-- Basic npm configuration for google maps package
-- Testing
