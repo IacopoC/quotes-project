@@ -2,6 +2,9 @@
 
 Quotes from Ozymandias is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened to during this period.
 
+### Concept
+This project was created as a **demo** to practice Vue 3 fundamentals
+
 ### Features
 - Quotes from Ozymandias
 - Google Maps with markers
