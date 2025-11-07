@@ -20,36 +20,18 @@ useHead({
 
 <template>
   <main>
-    <div class="home">
+    <div class="py-4 text-center">
       <h1>Quotes from Ozymandias:</h1>
       <QuoteDisplay />
       </div>
-    <div class="map-container">
+    <div class="row">
+      <div class="col-md-12">
       <MapDisplay />
+     </div>
     </div>
     <MusicDisplay />
   </main>
 </template>
 
 <style scoped>
-.home {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-h1 {
-  text-align: center;
-  color: white;
-  margin-bottom: 20px;
-  font-family: "Lexend Giga", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.map-container {
-  width: 100%;
-}
 </style>
