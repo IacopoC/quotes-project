@@ -71,39 +71,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="quote-display">
+  <div class="text-center">
     <Transition name="fade" mode="out-in">
     <p :key="currentQuote">{{ currentQuote }}</p>
     </Transition>
   </div>
-  <span class="quote-counter">{{ quoteCounter }}</span>
+  <div class="py-4">
+  <span>{{ quoteCounter }}</span>
+  </div>
   <div class="controls">
-    <button @click="previousQuote">Back</button>
-    <button @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
-    <button @click="nextQuote">Next</button>
+    <button type="button" class="btn btn-danger" @click="previousQuote">Back</button>
+    <button type="button" class="btn btn-danger" @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
+    <button type="button" class="btn btn-danger" @click="nextQuote">Next</button>
   </div>
 </template>
 
 <style scoped>
-
-.quote-display {
-  color: white;
-  text-align: center;
-  font-size: 1.5em;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.quote-counter {
-  color: white;
-  padding: 20px 0;
-}
-
-p {
-  min-height: 100px;
-  margin: 0;
-  line-height: 1.4;
-}
 </style>
