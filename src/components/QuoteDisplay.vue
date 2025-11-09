@@ -71,20 +71,28 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="text-center">
-    <Transition name="fade" mode="out-in">
-    <p :key="currentQuote">{{ currentQuote }}</p>
-    </Transition>
-  </div>
-  <div class="py-4">
-  <span>{{ quoteCounter }}</span>
-  </div>
-  <div class="controls">
-    <button type="button" class="btn btn-danger" @click="previousQuote">Back</button>
-    <button type="button" class="btn btn-danger" @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
-    <button type="button" class="btn btn-danger" @click="nextQuote">Next</button>
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Quotes from Ozymandias</h1>
+      <div class="min-height-quotes">
+      <Transition name="fade" mode="out-in">
+        <p class="col-md-8 fs-4" :key="currentQuote">{{ currentQuote }}</p>
+      </Transition>
+        </div>
+      <button class="btn btn-danger btn-lg me-2" type="button" @click="previousQuote">Back</button>
+      <button class="btn btn-danger btn-lg me-2" type="button" @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
+      <button class="btn btn-danger btn-lg me-3" type="button" @click="nextQuote">Next</button>
+      <span>{{ quoteCounter }}</span>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.min-height-quotes {
+  min-height: 130px;
+}
+
+.paused {
+  background-color: darkgrey;
+}
 </style>

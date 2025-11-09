@@ -20,8 +20,7 @@ useHead({
 
 <template>
   <main>
-    <div class="py-4 text-center">
-      <h1>Quotes from Ozymandias:</h1>
+    <div class="py-4">
       <QuoteDisplay />
       </div>
     <div class="row">
