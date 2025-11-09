@@ -82,7 +82,9 @@ onUnmounted(() => {
       <button class="btn btn-danger btn-lg me-2" type="button" @click="previousQuote">Back</button>
       <button class="btn btn-danger btn-lg me-2" type="button" @click="tooglePause" :class="{ 'paused': canPause }">{{ canPause ? 'Play' : 'Pause' }}</button>
       <button class="btn btn-danger btn-lg me-3" type="button" @click="nextQuote">Next</button>
+     <div class="quote-counter d-inline">
       <span>{{ quoteCounter }}</span>
+       </div>
     </div>
   </div>
 </template>
@@ -93,6 +95,6 @@ onUnmounted(() => {
 }
 
 .paused {
-  background-color: darkgrey;
+  background-color: #3b3b3b;
 }
 </style>
