@@ -73,7 +73,7 @@ onUnmounted(() => {
 <template>
   <div class="p-5 mb-4 bg-body-tertiary rounded-3">
     <div class="container-fluid py-5">
-    <h1 class="display-5 fw-bold">Quotes from Ozymandias</h1>
+    <h2 class="fw-bold">Quotes from Ozymandias</h2>
       <div class="min-height-quotes">
       <Transition name="fade" mode="out-in">
         <p class="col-md-8 fs-4" :key="currentQuote">{{ currentQuote }}</p>
@@ -92,6 +92,18 @@ onUnmounted(() => {
 <style scoped>
 .min-height-quotes {
   min-height: 130px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
 }
 
 .paused {
