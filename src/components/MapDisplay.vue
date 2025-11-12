@@ -35,6 +35,8 @@ const toggleInfo = (id) => {
 </script>
 
 <template>
+  <div class="row py-4">
+    <div class="col-md-6">
   <GoogleMap
     :api-key="apiKey"
     :map-id="mapId"
@@ -61,21 +63,29 @@ const toggleInfo = (id) => {
       </InfoWindow>
     </template>
   </GoogleMap>
+      </div>
+    <div class="col-md-6">
+      <div class="py-4 px-3">
+        <h3 class="pb-4">List of Ozymandias places:</h3>
+        <p>1 ★. A place I remember</p>
+        <p>2 ★. A place I remember Again</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-h3, p {
+.info-map h3 {
+  color: #181818;
+}
+
+.info-map p {
   color: #181818;
 }
 
 .google-map {
   width: 100%;
   height: 500px;
-  padding: 10px;
-  margin: 40px 0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #c3c3c3;
-  background-color: darkred;
 }
 
 .info-map {
