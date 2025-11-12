@@ -30,4 +30,12 @@ import FooterMain from './components/FooterMain.vue';
 nav {
   font-family: "Lexend Giga", sans-serif;
 }
+
+.nav-link {
+  color: white;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #dc3545;
+}
 </style>
