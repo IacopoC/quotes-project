@@ -17,7 +17,7 @@ const markers = ref([
     id: 2,
     position: { lat: 46.3062213, lng: 10.7355964 },
     title: 'Ozymandias',
-    description: 'A place I remember again...',
+    description: 'A place where I remember again...',
     pinOptions: { background: 'red', glyph: '★', glyphColor: 'white', borderColor: 'white' }
   }
 ])
@@ -55,7 +55,7 @@ const toggleInfo = (id) => {
         :options="{ position: marker.position }"
       >
         <div class="info-map">
-          <h3>{{ marker.title }}</h3>
+          <h4>{{ marker.title }}</h4>
           <p>{{ marker.description }}</p>
           <p>Lat: {{ marker.position.lat }}</p>
           <p>Lng: {{ marker.position.lng }}</p>
@@ -67,15 +67,18 @@ const toggleInfo = (id) => {
     <div class="col-md-6">
       <div class="py-4 px-3">
         <h3 class="pb-4">List of Ozymandias places:</h3>
-        <p>1 ★. A place I remember</p>
-        <p>2 ★. A place I remember Again</p>
+        <p>The places where the remembering of Ozymandias is very present are the followings, places where the energy of Ozymandias is very strong.</p>
+        <ul>
+          <li>A place where I remember again - Ossana (TN), Italy ★</li>
+          <li>A place where I remember - Ledro (TN), Italy ★</li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.info-map h3 {
+.info-map h4 {
   color: #181818;
 }
 
