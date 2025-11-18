@@ -1,10 +1,16 @@
 <template>
-  <footer class="footer-container">
-    <p>&copy; {{ currentYear }} Quotes from Ozymandias -
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/about">About</RouterLink>
-    </p>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> <p class="col-md-4 mb-0 text-body-secondary">&copy; {{ currentYear }} Quotes from Ozymandias</p>
+    <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item">
+      <RouterLink to="/" class="nav-link text-white">Home</RouterLink>
+    </li>
+    <li class="nav-item">
+      <RouterLink to="/about" class="nav-link text-white">About</RouterLink>
+    </li>
+  </ul>
   </footer>
+  </div>
 </template>
 
 <script setup>
@@ -14,10 +20,4 @@ const currentYear = ref(new Date().getFullYear());
 </script>
 
 <style scoped>
-.footer-container {
-  text-align: center;
-  margin-top: auto;
-  color: white;
-  width: 100%;
-}
 </style>
