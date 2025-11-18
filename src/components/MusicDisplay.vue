@@ -50,11 +50,13 @@ function toggleLike(songId) {
 </script>
 
 <template>
-  <div class="song-list">
+  <div class="row py-4">
+    <div class="col-md-12">
     <h2>Songs in Ozymandias:</h2>
-    <div class="grid-container">
-      <div v-for="song in songs" :key="song.id" class="song-item">
-        <h3>{{ song.title }}</h3>
+      </div>
+      <div v-for="song in songs" :key="song.id" class="col-md-6 song-item">
+        <div class="py-4">
+        <p><strong>{{ song.title }}</strong></p>
         <p>{{ song.description }}</p>
         <p><strong>Time:</strong> {{ song.duration }}</p>
 
@@ -66,6 +68,7 @@ function toggleLike(songId) {
             allowfullscreen
           ></iframe>
         </div>
+          </div>
         <LikeButton
           :current-likes="song.likes"
           :is-liked="likedVideos.includes(song.id)"
@@ -73,37 +76,16 @@ function toggleLike(songId) {
         />
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
-h2 {
-  color: #fff;
-}
-
-.song-list {
-  max-width: 1400px;
-  margin: auto;
-  padding: 1rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.song-item {
-  padding: 3rem 1rem 3rem 0;
-}
-
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  width: 100%;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  border-radius: 10px;
-  margin: 1rem 0;
+  margin-bottom: 15px;
 }
 
 .video-container iframe {
@@ -112,17 +94,5 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-button.liked {
-  background-color: #636363;
-  color: white;
-  cursor: default;
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
