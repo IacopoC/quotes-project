@@ -9,7 +9,7 @@ import FooterMain from './components/FooterMain.vue';
     <span class="fs-5">Quotes from Ozymandias</span>
     </p>
     <ul class="nav nav-pills">
-      <li class="nav-item pe-4">
+      <li class="nav-item">
         <RouterLink to="/" class="nav-link" active-class="active" exact-active-class="active">
           Home
         </RouterLink>
