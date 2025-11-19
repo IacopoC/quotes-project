@@ -19,6 +19,11 @@ import FooterMain from './components/FooterMain.vue';
           About
         </RouterLink>
       </li>
+      <li class="nav-item">
+        <RouterLink to="/music" class="nav-link" active-class="active" exact-active-class="active">
+          Music
+        </RouterLink>
+      </li>
    </ul>
   </header>
   <RouterView />

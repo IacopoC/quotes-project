@@ -8,6 +8,9 @@
     <li class="nav-item">
       <RouterLink to="/about" class="nav-link text-white">About</RouterLink>
     </li>
+      <li class="nav-item">
+        <RouterLink to="/music" class="nav-link text-white">Music</RouterLink>
+      </li>
   </ul>
   </footer>
   </div>

@@ -1,8 +1,8 @@
 <script setup>
-import QuoteDisplay from '@/components/QuoteDisplay.vue';
-import MapDisplay from '@/components/MapDisplay.vue';
+import MusicDisplay from '@/components/MusicDisplay.vue'
 import { useRoute } from 'vue-router';
 import { useHead } from '@vueuse/head';
+
 
 const route = useRoute();
 
@@ -18,15 +18,11 @@ useHead({
 </script>
 
 <template>
-    <div class="py-4">
-      <QuoteDisplay />
-      </div>
-    <div class="row">
-      <div class="col-md-12">
-      <MapDisplay />
-     </div>
-    </div>
+  <div class="py-4">
+  <MusicDisplay />
+  </div>
 </template>
 
 <style scoped>
+
 </style>

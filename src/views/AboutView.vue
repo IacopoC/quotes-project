@@ -17,10 +17,8 @@ useHead({
 </script>
 
 <template>
-  <div class="about">
     <div class="py-4">
     <p><strong>Quotes from Ozymandias</strong> is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened to during this period.</p>
-  </div>
   </div>
 </template>
 
