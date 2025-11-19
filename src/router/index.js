@@ -25,6 +25,18 @@ const router = createRouter({
         description: 'About of Ozymandias'
       }
     },
+    {
+      path: '/music',
+      name: 'music',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/MusicView.vue'),
+      meta: {
+        title: 'Music - Ozymandias',
+        description: 'Music of Ozymandias'
+      }
+    },
   ],
 })
 
