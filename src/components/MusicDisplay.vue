@@ -18,6 +18,38 @@ const defaultSongs = [
     duration: "3:43",
     youtubeEmbed: "https://www.youtube.com/embed/H4H99b1CjPU",
     likes: 0
+  },
+  {
+    id: 3,
+    title: "Deja Vu",
+    description: "I know you get Deja Vu. ",
+    duration: "3:10",
+    youtubeEmbed: "https://www.youtube.com/embed/nlnMDttgTbk",
+    likes: 0
+  },
+  {
+    id: 4,
+    title: "Work",
+    description: "Work, going to make that money.",
+    duration: "3:14",
+    youtubeEmbed: "https://www.youtube.com/embed/VGnOpZhsPk4",
+    likes: 0
+  },
+  {
+    id: 5,
+    title: "Halazia",
+    description: "Be the light, Halazia. ",
+    duration: "4:24",
+    youtubeEmbed: "https://www.youtube.com/embed/SszP3hlQ55Y",
+    likes: 0
+  },
+  {
+    id: 6,
+    title: "Ice on My Teeth",
+    description: "We can play like tennis.",
+    duration: "3:22",
+    youtubeEmbed: "https://www.youtube.com/embed/5OflOlcHLb8",
+    likes: 0
   }
 ]
 
@@ -54,6 +86,8 @@ function toggleLike(songId) {
     <div class="col-md-12">
     <h2>Songs in Ozymandias:</h2>
       </div>
+    </div>
+    <div class="row">
       <div v-for="song in songs" :key="song.id" class="col-md-6 song-item">
         <div class="py-4">
         <p><strong>{{ song.title }}</strong></p>
