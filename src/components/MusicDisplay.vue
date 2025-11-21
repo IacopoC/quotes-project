@@ -14,7 +14,7 @@ const defaultSongs = [
   {
     id: 2,
     title: "Lemon Drop",
-    description: "Light hit for the summer 2025 by Ateez.",
+    description: "Stay up all night till sunrise.",
     duration: "3:43",
     youtubeEmbed: "https://www.youtube.com/embed/H4H99b1CjPU",
     likes: 0
