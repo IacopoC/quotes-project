@@ -14,6 +14,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 ### Dependencies
 - [Vue](https://vuejs.org/)
 - [Google Fonts Lexend Giga](https://fonts.google.com/specimen/Lexend+Giga)
+- [Bootstrap](https://getbootstrap.com/)
 - [Vitest](https://vitest.dev/)
 - [Vue Router](https://router.vuejs.org/)
 
