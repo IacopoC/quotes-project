@@ -9,14 +9,14 @@ const markers = ref([
   {
     id: 1,
     position: { lat: 45.8777451, lng: 10.7394732 },
-    title: 'Ozymandias',
+    title: 'Ledro (TN)',
     description: 'A place where I remember...',
     pinOptions: { background: '#FBBC04', glyph: '★', glyphColor: 'white', borderColor: 'white' }
   },
   {
     id: 2,
     position: { lat: 46.3062213, lng: 10.7355964 },
-    title: 'Ozymandias',
+    title: 'Ossana (TN)',
     description: 'A place where I remember again...',
     pinOptions: { background: 'red', glyph: '★', glyphColor: 'white', borderColor: 'white' }
   }
@@ -68,9 +68,9 @@ const toggleInfo = (id) => {
       <div class="py-4 px-3">
         <h3 class="pb-4">List of Ozymandias places:</h3>
         <p>The places where the remembering of Ozymandias is very present are the followings, places where the energy of Ozymandias is very strong.</p>
-        <ul>
-          <li>A place where I remember again - Ossana (TN), Italy ★</li>
-          <li>A place where I remember - Ledro (TN), Italy ★</li>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">A place where I remember again ★ Ossana (TN), Italy</li>
+          <li class="list-group-item">A place where I remember ★ Ledro (TN), Italy</li>
         </ul>
       </div>
     </div>
