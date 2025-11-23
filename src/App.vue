@@ -1,6 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useSongsStore } from '@/stores/songs'
 import FooterMain from './components/FooterMain.vue';
+
+const songsStore = useSongsStore()
 </script>
 
 <template>
@@ -23,6 +26,11 @@ import FooterMain from './components/FooterMain.vue';
         <RouterLink to="/music" class="nav-link" active-class="active" exact-active-class="active">
           Music
         </RouterLink>
+      </li>
+      <li class="nav-item ms-3 d-flex align-items-center">
+        <span class="badge bg-light-subtle fs-6">
+          ❤️ {{ songsStore.totalLikes }}
+        </span>
       </li>
    </ul>
   </header>
