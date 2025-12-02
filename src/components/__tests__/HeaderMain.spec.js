@@ -28,7 +28,7 @@ describe('HeaderMain.vue', () => {
     })
 
     const badge = wrapper.find('span.badge')
-    expect(badge.text()).toContain('5') // 2 + 3 + 0 = 5
+    expect(badge.text()).toContain('5')
   })
 
   it('update totalLikes when changing likes in store', async () => {
@@ -44,6 +44,26 @@ describe('HeaderMain.vue', () => {
     await wrapper.vm.$nextTick()
 
     const badge = wrapper.find('span.badge')
-    expect(badge.text()).toContain('6') // 3 + 3 + 0 = 6
+    expect(badge.text()).toContain('6')
+  })
+
+  it('reset likes when click on button', async () => {
+    const wrapper = mount(HeaderMain, {
+      global: {
+        stubs: {
+          RouterLink: true
+       },
+      },
+    })
+
+    songsStore.songs[0].likes = 5
+    songsStore.songs[1].likes = 3
+
+    await wrapper.find('button').trigger('click')
+    await wrapper.vm.$nextTick()
+
+    expect(songsStore.totalLikes).toBe(0)
+    const badge = wrapper.find('span.badge')
+    expect(badge.text()).toContain('0')
   })
 })
