@@ -30,6 +30,7 @@ const songsStore = useSongsStore()
         <span class="badge bg-light-subtle fs-6">
           ❤️ {{ songsStore.totalLikes }}
         </span>
+        <button @click="songsStore.resetLikes" class="btn btn-outline-danger ms-2">Reset Likes ❤️</button>
       </li>
     </ul>
   </header>

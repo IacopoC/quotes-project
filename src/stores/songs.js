@@ -79,6 +79,13 @@ export const useSongsStore = defineStore('songs', () => {
     localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
   }
 
-  return { songs, likedVideos, totalLikes, toggleLike }
+  function resetLikes() {
+    songs.value.forEach(song => song.likes = 0)
+    likedVideos.value = []
+    localStorage.setItem('songs', JSON.stringify(songs.value))
+    localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
+  }
+
+  return { songs, likedVideos, totalLikes, toggleLike, resetLikes }
 })
 
