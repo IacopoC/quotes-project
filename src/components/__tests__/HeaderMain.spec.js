@@ -66,4 +66,20 @@ describe('HeaderMain.vue', () => {
     const badge = wrapper.find('span.badge')
     expect(badge.text()).toContain('0')
   })
+
+  it('show reset likes message', async () => {
+    const wrapper = mount(HeaderMain, {
+      global: {
+        stubs: {
+          RouterLink: true
+        }
+      }
+    })
+
+    await wrapper.find('button').trigger('click')
+    expect(wrapper.text()).toContain('Ok!')
+
+    await new Promise(r => setTimeout(r, 2100))
+    expect(wrapper.text()).not.toContain('Ok!')
+  })
 })
