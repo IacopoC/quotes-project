@@ -1,8 +1,18 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useSongsStore } from '@/stores/songs'
 
 const songsStore = useSongsStore()
+const showResetMessage = ref(false)
+
+function handleResetLikes() {
+  songsStore.resetLikes()
+  showResetMessage.value = true
+  setTimeout(() => {
+    showResetMessage.value = false
+  }, 2000)
+}
 </script>
 
 <template>
@@ -30,7 +40,8 @@ const songsStore = useSongsStore()
         <span class="badge bg-light-subtle fs-6">
           ❤️ {{ songsStore.totalLikes }}
         </span>
-        <button @click="songsStore.resetLikes" class="btn btn-outline-danger ms-2">Reset Likes ❤️</button>
+        <button @click="handleResetLikes" class="btn btn-outline-danger ms-2">Reset Likes ❤️</button>
+      <span v-if="showResetMessage" class="ms-2 text-success fw-bold">Ok!</span>
       </li>
     </ul>
   </header>
