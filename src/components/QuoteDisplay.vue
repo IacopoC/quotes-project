@@ -2,14 +2,14 @@
 import { onMounted, onUnmounted } from 'vue'
 import { useQuotesStore } from '@/stores/quotes.js'
 
-const store = useQuotesStore()
+const quotesStore = useQuotesStore()
 
 onMounted(() => {
-  store.start()
+  quotesStore.start()
 })
 
 onUnmounted(() => {
-  store.stop()
+  quotesStore.stop()
 })
 
 </script>
@@ -20,14 +20,14 @@ onUnmounted(() => {
     <h2 class="fw-bold">Quotes from Ozymandias</h2>
       <div class="min-height-quotes">
       <Transition name="fade" mode="out-in">
-        <p class="col-md-8 fs-4" :key="store.currentQuote">{{ store.currentQuote }}</p>
+        <p class="col-md-8 fs-4" :key="quotesStore.currentQuote">{{ quotesStore.currentQuote }}</p>
       </Transition>
         </div>
-      <button class="btn btn-danger btn-lg me-2" type="button" @click="store.previousQuote">Back</button>
-      <button class="btn btn-danger btn-lg me-2" type="button" @click="store.togglePause" :class="{ 'paused': store.canPause }">{{ store.canPause ? 'Play' : 'Pause' }}</button>
-      <button class="btn btn-danger btn-lg me-3" type="button" @click="store.nextQuote">Next</button>
+      <button class="btn btn-danger btn-lg me-2" type="button" @click="quotesStore.previousQuote">Back</button>
+      <button class="btn btn-danger btn-lg me-2" type="button" @click="quotesStore.togglePause" :class="{ 'paused': quotesStore.canPause }">{{ quotesStore.canPause ? 'Play' : 'Pause' }}</button>
+      <button class="btn btn-danger btn-lg me-3" type="button" @click="quotesStore.nextQuote">Next</button>
      <div class="quote-counter d-inline">
-      <span>{{ store.quoteCounter }}</span>
+      <span>{{ quotesStore.quoteCounter }}</span>
        </div>
     </div>
   </div>
