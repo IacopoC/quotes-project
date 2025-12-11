@@ -80,7 +80,7 @@ export const useSongsStore = defineStore('songs', () => {
   }
 
   function resetLikes() {
-    const hadLikes = songs.value.some( song => song.likes > 0) || likedVideos.value.lenght > 0
+    const hadLikes = songs.value.some( song => song.likes > 0) || likedVideos.value.length > 0
 
     songs.value.forEach(song => song.likes = 0)
     likedVideos.value = []
