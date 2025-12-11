@@ -7,8 +7,11 @@ const songsStore = useSongsStore()
 const showResetMessage = ref(false)
 
 function handleResetLikes() {
-  songsStore.resetLikes()
+  const changed = songsStore.resetLikes()
+  if(!changed) return
+
   showResetMessage.value = true
+
   setTimeout(() => {
     showResetMessage.value = false
   }, 2000)
