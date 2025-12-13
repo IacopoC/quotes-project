@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { GoogleMap, AdvancedMarker, InfoWindow } from 'vue3-google-map'
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
@@ -22,10 +22,10 @@ const markers = ref([
   }
 ])
 
-const center = {
-  lat: (markers.value[0].position.lat + markers.value[1].position.lat) / 2,
-  lng: (markers.value[0].position.lng + markers.value[1].position.lng) / 2
-}
+const center = computed(() => ({
+  lat: markers.value.reduce((sum, marker) => sum + marker.position.lat, 0) / markers.value.length,
+  lng: markers.value.reduce((sum, marker) => sum + marker.position.lng, 0) / markers.value.length,
+}))
 
 const activeMarker = ref(null)
 
