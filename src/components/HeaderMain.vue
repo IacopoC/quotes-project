@@ -24,17 +24,17 @@ function handleResetLikes() {
       <RouterLink to="/" class="text-white text-decoration-none"><span class="fs-5">Quotes from Ozymandias</span></RouterLink>
     </p>
     <ul class="nav nav-pills">
-      <li class="nav-item">
+      <li class="nav-item p-1">
         <RouterLink to="/" class="nav-link" active-class="active" exact-active-class="active">
           Home
         </RouterLink>
       </li>
-      <li class="nav-item">
+      <li class="nav-item p-1">
         <RouterLink to="/about" class="nav-link" active-class="active" exact-active-class="active">
           About
         </RouterLink>
       </li>
-      <li class="nav-item">
+      <li class="nav-item p-1">
         <RouterLink to="/music" class="nav-link" active-class="active" exact-active-class="active">
           Music
         </RouterLink>
