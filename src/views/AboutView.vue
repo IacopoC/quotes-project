@@ -19,9 +19,12 @@ useHead({
 <template>
     <div class="py-4">
     <div class="row">
-      <div class="col-md-12 pb-4"><p><strong>Quotes from Ozymandias</strong> is a project about the famous poem of Shelley, linked to places where I remember the poem and music I listened to during this period.</p></div>
+      <div class="col-md-12">
+        <p><strong>Quotes from Ozymandias</strong> is a project about the famous poem of Shelley,
+          linked to places where I remember the poem and music I listened to during this period.</p>
       </div>
-      <div class="row">
+      </div>
+      <div class="row pt-4">
       <div class="col-md-3"></div>
       <div class="col-md-6">
       <figure class="text-center">
