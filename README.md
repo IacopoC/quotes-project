@@ -8,7 +8,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 ### Features
 - Quotes from Ozymandias
 - Google Maps with markers
-- Music videos from Ozymandias with like buttons
+- Music videos from Ozymandias with like buttons and reset likes button
 
 
 ### Dependencies
