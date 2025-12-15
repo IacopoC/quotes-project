@@ -13,6 +13,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 
 ### Dependencies
 - [Vue](https://vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
 - [Google Fonts Lexend Giga](https://fonts.google.com/specimen/Lexend+Giga)
 - [Bootstrap](https://getbootstrap.com/)
 - [Vitest](https://vitest.dev/)
@@ -25,6 +26,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 - Composition API
 - ref, script setup
 - Component Events
+- Basic Pinia for creating stores
 - Basic routing using Vue router
 - Basic npm configuration for google maps package
 - Testing
