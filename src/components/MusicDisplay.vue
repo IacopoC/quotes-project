@@ -1,6 +1,7 @@
 <script setup>
 import { useSongsStore } from '@/stores/songs'
 import LikeButton from '@/components/LikeButton.vue'
+import AllLikeToast from '@/components/AllLikeToast.vue'
 
 const songsStore = useSongsStore()
 </script>
@@ -34,6 +35,7 @@ const songsStore = useSongsStore()
         />
       </div>
     </div>
+  <AllLikeToast />
 </template>
 
 <style scoped>
