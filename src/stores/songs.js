@@ -73,9 +73,20 @@ export const useSongsStore = defineStore('songs', () => {
   const songs = ref(JSON.parse(localStorage.getItem('songs')) || defaultSongs)
   const likedVideos = ref(JSON.parse(localStorage.getItem('likedVideos')) || [])
 
+  const hasShownAllLikedToast = ref(JSON.parse(localStorage.getItem('hasShownAllLikedToast')) || false )
+
   const totalLikes = computed(() =>
     songs.value.reduce((sum, song) => sum + song.likes, 0)
   )
+
+  const shouldShowAllLikedToast = computed(() => {
+    return likedVideos.value.length === songs.value.length && !hasShownAllLikedToast.value
+  })
+
+  function markAllLikedToastAsShownToast() {
+    hasShownAllLikedToast.value = true
+    localStorage.setItem('hasShownAllLikedToast', JSON.stringify(true))
+  }
 
   function toggleLike(songId) {
     const song = songs.value.find(s => s.id === songId)
@@ -101,12 +112,15 @@ export const useSongsStore = defineStore('songs', () => {
     songs.value.forEach(song => song.likes = 0)
     likedVideos.value = []
 
+    hasShownAllLikedToast.value = false
+    localStorage.removeItem('hasShownAllLikedToast')
+
     localStorage.setItem('songs', JSON.stringify(songs.value))
     localStorage.setItem('likedVideos', JSON.stringify(likedVideos.value))
 
     return hadLikes
   }
 
-  return { songs, likedVideos, totalLikes, toggleLike, resetLikes }
+  return { songs, likedVideos, totalLikes, shouldShowAllLikedToast, toggleLike, resetLikes, markAllLikedToastAsShownToast }
 })
 
