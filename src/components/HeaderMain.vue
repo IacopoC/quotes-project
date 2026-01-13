@@ -44,7 +44,7 @@ function handleResetLikes() {
           ❤️ {{ songsStore.totalLikes }}
         </span>
         <button @click="handleResetLikes" class="btn btn-outline-danger ms-2">Reset Likes ❤️</button>
-      <span v-if="showResetMessage" class="ms-2 text-success fw-bold">Ok!</span>
+      <span v-if="showResetMessage" class="ms-2 text-white fw-bold">Ok!</span>
       </li>
     </ul>
   </header>
