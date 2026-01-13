@@ -51,6 +51,22 @@ export const useSongsStore = defineStore('songs', () => {
       duration: "3:22",
       youtubeEmbed: "https://www.youtube.com/embed/5OflOlcHLb8",
       likes: 0
+    },
+    {
+      id: 7,
+      title: "Run",
+      description: "Run, run, run...",
+      duration: "7:30",
+      youtubeEmbed: "https://www.youtube.com/embed/wKysONrSmew",
+      likes: 0
+    },
+    {
+      id: 8,
+      title: "EPILOGUE: Young Forever",
+      description: "Epilogue of your youth.",
+      duration: "3:25",
+      youtubeEmbed: "https://www.youtube.com/embed/LbvE0FV_70U",
+      likes: 0
     }
   ]
 
