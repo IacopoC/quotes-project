@@ -27,7 +27,13 @@ describe('MusicDisplay.vue', () => {
       ]
       songsStore.likedVideos.value = []
 
-      const wrapper = mount(MusicDisplay)
+      const wrapper = mount(MusicDisplay, {
+        global: {
+          stubs: {
+            AllLikeToast: true
+          }
+        }
+      })
       const firstButton = wrapper.find('button')
       expect(firstButton.text()).toContain('0')
       expect(firstButton.classes()).not.toContain('liked')
@@ -44,7 +50,13 @@ describe('MusicDisplay.vue', () => {
       ]
       songsStore.likedVideos.value = []
 
-      const wrapper = mount(MusicDisplay)
+      const wrapper = mount(MusicDisplay, {
+        global: {
+          stubs: {
+            AllLikeToast: true
+          }
+        }
+      })
       const firstButton = wrapper.find('button')
 
       await firstButton.trigger('click')
@@ -70,7 +82,13 @@ describe('MusicDisplay.vue', () => {
       ]
       songsStore.likedVideos.value = []
 
-      const wrapper = mount(MusicDisplay)
+      const wrapper = mount(MusicDisplay, {
+        global: {
+          stubs: {
+            AllLikeToast: true
+          }
+        }
+      })
       const firstButton = wrapper.find('button')
 
       await firstButton.trigger('click')
