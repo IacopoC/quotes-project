@@ -26,7 +26,7 @@ onMounted(() => {
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div
       id="allLikedToast"
-      class="toast align-items-center text-bg-light border-0"
+      class="toast align-items-center bg-light-subtle border-0"
       role="alert"
       aria-live="assertive"
       aria-atomic="true"
