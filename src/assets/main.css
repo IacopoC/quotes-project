@@ -1,13 +1,13 @@
 @import './base.css';
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lexend Giga", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 p, ul, ol {
-  font-family: "Lexend Giga", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 span, button {
-  font-family: "Lexend Giga", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
