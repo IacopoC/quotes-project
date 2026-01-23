@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { GoogleMap, AdvancedMarker, InfoWindow } from 'vue3-google-map'
+import { RouterLink } from 'vue-router'
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 const mapId = import.meta.env.VITE_MAP_ID
@@ -36,7 +37,7 @@ const toggleInfo = (id) => {
 
 <template>
   <div class="row py-4">
-    <div class="col-md-6">
+    <div class="col-md-12">
   <GoogleMap
     :api-key="apiKey"
     :map-id="mapId"
@@ -64,17 +65,23 @@ const toggleInfo = (id) => {
     </template>
   </GoogleMap>
       </div>
-    <div class="col-md-6">
-      <div class="py-4 px-3">
-        <h3 class="pb-4">List of Ozymandias places:</h3>
-        <p>The places where the remembering of Ozymandias is very present are the followings, places where the energy of Ozymandias is very strong.</p>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">A place where I remember again ★ Ossana (TN), Italy</li>
-          <li class="list-group-item">A place where I remember ★ Ledro (TN), Italy</li>
-        </ul>
+    </div>
+    <div class="row align-items-md-stretch py-4">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>What is Ozymandias</h2>
+          <p>See in the map the Ozymandias places I discovered, learn more about the project in the about page.</p>
+          <RouterLink to="/about"><button class="btn btn-outline-light" type="button">Go to About</button></RouterLink>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+          <h2>Places in Ozymandias</h2>
+          <p>The places of Ozymandias is Ossana (TN) and Lake Ledro(TN), two places where the spirit of the poem of Shelley is very present.</p>
+          <button class="btn btn-outline-secondary" type="button">Go to Places</button>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
