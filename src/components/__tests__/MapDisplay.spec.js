@@ -17,13 +17,25 @@ vi.mock('vue3-google-map', () => ({
 
 describe('MapDisplay', () => {
   it('renderizza i marker', () => {
-    const wrapper = mount(MapDisplay)
+    const wrapper = mount(MapDisplay, {
+      global: {
+        stubs: {
+          InfoDisplay: true,
+        }
+      }
+    })
     const markers = wrapper.findAll('.mock-marker')
     expect(markers.length).toBe(2)
   })
 
   it('apre e chiude InfoWindow al click sul marker', async () => {
-    const wrapper = mount(MapDisplay)
+    const wrapper = mount(MapDisplay, {
+      global: {
+        stubs: {
+          InfoDisplay: true,
+        }
+      }
+    })
     const markers = wrapper.findAll('.mock-marker')
 
     expect(wrapper.findAll('.mock-infowindow').length).toBe(0)
