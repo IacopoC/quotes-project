@@ -1,6 +1,7 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { useHead } from '@vueuse/head';
+import OzymandiasImage from '@/assets/img/piramide.jpg';
 
 
 const route = useRoute();
@@ -22,16 +23,12 @@ useHead({
       <h2>About Ozymandias</h2>
     </div>
   </div>
-    <div class="row">
-      <div class="col-md-12">
+      <div class="row pt-4">
+      <div class="col-md-6">
         <p><strong>Quotes from Ozymandias</strong> is a project about the famous poem of Shelley,
           linked to places where I remember the poem and music I listened to during this period.</p>
-      </div>
-      </div>
-      <div class="row pt-4">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-      <figure class="text-center">
+        <p>Here is the full poem of Shelley:</p>
+      <figure>
         <blockquote class="blockquote">
           <p>I met a traveller from an antique land,
             Who said—“Two vast and trunkless legs of stone
@@ -53,7 +50,9 @@ useHead({
         </figcaption>
       </figure>
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <img :src="OzymandiasImage" alt="Ozymandias" class="img-fluid">
+      </div>
       </div>
 </template>
 
