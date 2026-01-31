@@ -17,7 +17,11 @@ useHead({
 </script>
 
 <template>
-    <div class="py-4">
+  <div class="row py-4">
+    <div class="col-md-12">
+      <h2>About Ozymandias</h2>
+    </div>
+  </div>
     <div class="row">
       <div class="col-md-12">
         <p><strong>Quotes from Ozymandias</strong> is a project about the famous poem of Shelley,
@@ -51,7 +55,6 @@ useHead({
       </div>
       <div class="col-md-3"></div>
       </div>
-    </div>
 </template>
 
 <style scoped>

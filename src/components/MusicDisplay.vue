@@ -9,7 +9,7 @@ const songsStore = useSongsStore()
 <template>
   <div class="row py-4">
     <div class="col-md-12">
-    <h2>Songs in Ozymandias:</h2>
+    <h2>Songs in Ozymandias</h2>
       </div>
     </div>
     <div class="row">
