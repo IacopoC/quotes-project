@@ -43,7 +43,7 @@ function handleResetLikes() {
         <span class="badge bg-light-subtle fs-6">
           ❤️ {{ songsStore.totalLikes }}
         </span>
-        <button @click="handleResetLikes" class="btn btn-outline-danger ms-2">Reset Likes ❤️</button>
+        <button @click="handleResetLikes" class="btn btn-outline-light ms-2">Reset Likes ❤️</button>
       <span v-if="showResetMessage" class="ms-2 text-white fw-bold">Ok!</span>
       </li>
     </ul>
@@ -60,6 +60,7 @@ nav {
 }
 
 .nav-pills .nav-link.active {
-  background-color: #dc3545;
+  background-color: transparent;
+  border: 1px solid white;
 }
 </style>

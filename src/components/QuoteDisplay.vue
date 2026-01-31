@@ -23,9 +23,9 @@ onUnmounted(() => {
         <p class="col-md-8 fs-4" :key="quotesStore.currentQuote">{{ quotesStore.currentQuote }}</p>
       </Transition>
         </div>
-      <button class="btn btn-danger btn-lg me-2 mb-2" type="button" @click="quotesStore.previousQuote">Back</button>
-      <button class="btn btn-danger btn-lg me-2 mb-2" type="button" @click="quotesStore.togglePause" :class="{ 'paused': quotesStore.canPause }">{{ quotesStore.canPause ? 'Play' : 'Pause' }}</button>
-      <button class="btn btn-danger btn-lg me-3 mb-2" type="button" @click="quotesStore.nextQuote">Next</button>
+      <button class="btn btn-outline-light btn-lg me-2 mb-2" type="button" @click="quotesStore.previousQuote">Back</button>
+      <button class="btn btn-outline-light btn-lg me-2 mb-2" type="button" @click="quotesStore.togglePause" :class="{ 'paused': quotesStore.canPause }">{{ quotesStore.canPause ? 'Play' : 'Pause' }}</button>
+      <button class="btn btn-outline-light btn-lg me-3 mb-2" type="button" @click="quotesStore.nextQuote">Next</button>
      <div class="quote-counter d-inline">
       <span>{{ quotesStore.quoteCounter }}</span>
        </div>
