@@ -14,7 +14,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 ### Dependencies
 - [Vue](https://vuejs.org/)
 - [Pinia](https://pinia.vuejs.org/)
-- [Google Fonts Lexend Giga](https://fonts.google.com/specimen/Lexend+Giga)
+- [Google Fonts Sans](https://fonts.google.com/specimen/Google+Sans)
 - [Bootstrap](https://getbootstrap.com/)
 - [Vitest](https://vitest.dev/)
 - [Vue Router](https://router.vuejs.org/)
