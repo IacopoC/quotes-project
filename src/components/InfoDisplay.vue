@@ -13,9 +13,9 @@ import { RouterLink } from 'vue-router'
     </div>
     <div class="col-md-6">
       <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-        <h2>Places in Ozymandias</h2>
-        <p>The places of Ozymandias is Ossana (TN) and Lake Ledro(TN), two places where the spirit of the poem of Shelley is very present.</p>
-        <button class="btn btn-outline-secondary" type="button">Go to Places</button>
+        <h2>Music in Ozymandias</h2>
+        <p>Music is a part of Ozymandias, you can find here tracks I was listening during my visit in the places.</p>
+        <RouterLink to="/music"><button class="btn btn-outline-light" type="button">Go to Music</button></RouterLink>
       </div>
     </div>
   </div>
