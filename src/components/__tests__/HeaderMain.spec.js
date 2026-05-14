@@ -77,9 +77,9 @@ describe('HeaderMain.vue', () => {
     })
 
     await wrapper.find('button').trigger('click')
-    expect(wrapper.text()).toContain('Ok!')
+    expect(wrapper.text()).toContain('Dissapear!')
 
     await new Promise(r => setTimeout(r, 2100))
-    expect(wrapper.text()).not.toContain('Ok!')
+    expect(wrapper.text()).not.toContain('Dissapear!')
   })
 })

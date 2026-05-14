@@ -7,7 +7,7 @@ describe('LikeButton.vue', () => {
     const wrapper = mount(LikeButton, {
       props: { currentLikes: 0, isLiked: false }
     })
-    expect(wrapper.text()).toContain('👍 Like me! (0)')
+    expect(wrapper.text()).toContain('Ozymandias! (0)')
     expect(wrapper.classes()).not.toContain('liked')
   })
 
@@ -15,7 +15,7 @@ describe('LikeButton.vue', () => {
     const wrapper = mount(LikeButton, {
       props: { currentLikes: 1, isLiked: true }
     })
-    expect(wrapper.text()).toContain('❤️ Liked! (1)')
+    expect(wrapper.text()).toContain('▲ Added to Ozymandias! (1)')
     expect(wrapper.classes()).toContain('liked')
   })
 
