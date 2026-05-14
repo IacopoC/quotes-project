@@ -32,7 +32,7 @@ onMounted(() => {
       aria-atomic="true"
     >
       <div class="d-flex">
-        <div class="toast-body">🎉 All likes to Ozymandias Songs!</div>
+        <div class="toast-body">▲ All songs added to Ozymandias!</div>
         <button
           type="button"
           class="btn-close btn-close-white me-2 m-auto"

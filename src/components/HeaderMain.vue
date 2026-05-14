@@ -41,10 +41,10 @@ function handleResetLikes() {
       </li>
       <li class="nav-item ms-3 d-flex align-items-center">
         <span class="badge bg-light-subtle fs-6">
-          ❤️ {{ songsStore.totalLikes }}
+          ▲ {{ songsStore.totalLikes }}
         </span>
-        <button @click="handleResetLikes" class="btn btn-outline-light ms-2">Reset Likes ❤️</button>
-      <span v-if="showResetMessage" class="ms-2 text-white fw-bold">Ok!</span>
+        <button @click="handleResetLikes" class="btn btn-outline-light ms-2">Reset Ozymandias ▲</button>
+      <span v-if="showResetMessage" class="ms-2 text-white fw-bold">Dissapear!</span>
       </li>
     </ul>
   </header>
