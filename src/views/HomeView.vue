@@ -18,6 +18,7 @@ useHead({
 </script>
 
 <template>
+  <main class="page">
     <div class="py-4">
       <QuoteDisplay />
       </div>
@@ -26,6 +27,7 @@ useHead({
       <MapDisplay />
      </div>
     </div>
+  </main>
 </template>
 
 <style scoped>

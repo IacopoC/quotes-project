@@ -18,6 +18,7 @@ useHead({
 </script>
 
 <template>
+  <main class="page">
   <div class="row py-4">
     <div class="col-md-12">
       <h2>About Ozymandias</h2>
@@ -54,6 +55,7 @@ useHead({
         <img :src="OzymandiasImage" alt="Ozymandias" class="img-fluid">
       </div>
       </div>
+  </main>
 </template>
 
 <style scoped>

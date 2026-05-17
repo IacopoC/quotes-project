@@ -18,9 +18,11 @@ useHead({
 </script>
 
 <template>
+  <main class="page">
   <div class="py-4">
   <MusicDisplay />
   </div>
+  </main>
 </template>
 
 <style scoped>
