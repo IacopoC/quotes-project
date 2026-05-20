@@ -1,7 +1,7 @@
 <script setup>
+import AboutDisplay from '@/components/AboutDisplay.vue';
 import { useRoute } from 'vue-router';
 import { useHead } from '@vueuse/head';
-import AboutDisplay from '@/components/AboutDisplay.vue';
 
 
 const route = useRoute();
