@@ -36,7 +36,7 @@ import OzymandiasImage from '@/assets/img/piramide.jpg'
       </figure>
     </div>
     <div class="col-md-6">
-      <img :src="OzymandiasImage" alt="Ozymandias" class="img-fluid">
+      <img :src="OzymandiasImage" alt="Ozymandias" class="img-fluid border border-secondary p-4">
     </div>
   </div>
 </template>
