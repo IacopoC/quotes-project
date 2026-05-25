@@ -8,7 +8,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 ### Features
 - Quotes from Ozymandias
 - Google Maps with markers
-- Music videos from Ozymandias with like buttons, reset likes button and info window for all likes.
+- Music videos from Ozymandias with like (Ozymandias) buttons, reset likes button and info window.
 
 
 ### Dependencies
@@ -20,7 +20,7 @@ This project was created as a **demo** to practice Vue 3 fundamentals.
 - [Vue Router](https://router.vuejs.org/)
 
 ### API
-- [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it) - Api key and Map ID required
+- [Google Maps](https://developers.google.com/maps/documentation/javascript/overview?hl=it) - Api key and Map ID required for map display.
 
 ### Concepts applied in the project
 - Composition API
